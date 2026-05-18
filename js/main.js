@@ -90,7 +90,7 @@ function initScrollAnimations() {
         observer.unobserve(entry.target);
       }
     });
-  }, { threshold: 0.1 });
+  }, { threshold: 0.05, rootMargin: '0px 0px -50px 0px' });
 
   document.querySelectorAll('.reveal, .reveal-left, .reveal-right, .reveal-scale').forEach(el => observer.observe(el));
 }
@@ -104,7 +104,7 @@ function initCounters() {
         const target = parseInt(counter.getAttribute('data-target'));
         const suffix = counter.getAttribute('data-suffix') || '';
         const prefix = counter.getAttribute('data-prefix') || '';
-        const duration = parseInt(counter.getAttribute('data-duration')) || 2000;
+        const duration = parseInt(counter.getAttribute('data-duration')) || 1200;
         animateCounter(counter, target, prefix, suffix, duration);
         observer.unobserve(counter);
       }
@@ -136,7 +136,7 @@ function animateDashboard(container) {
     const target = parseInt(ring.getAttribute('data-target')) || 0;
     const circumference = 2 * Math.PI * 30;
     const offset = circumference - (target / 100) * circumference;
-    setTimeout(() => { ring.style.strokeDashoffset = offset; }, index * 150);
+    setTimeout(() => { ring.style.strokeDashoffset = offset; }, index * 80);
   });
 }
 
@@ -146,7 +146,7 @@ function initSkillBars() {}
 function animateSkillBars(container) {
   container.querySelectorAll('.skill-bar-fill').forEach((bar, index) => {
     const target = bar.getAttribute('data-width') || '0%';
-    setTimeout(() => { bar.style.width = target; }, index * 100);
+    setTimeout(() => { bar.style.width = target; }, index * 60);
   });
 }
 
@@ -184,6 +184,9 @@ function openModal(id) {
   if (modal) {
     modal.classList.add('active');
     document.body.style.overflow = 'hidden';
+    document.body.style.paddingRight = '0px';
+    const content = modal.querySelector('.modal-content');
+    if (content) content.scrollTop = 0;
   }
 }
 
@@ -192,6 +195,7 @@ function closeModal(id) {
   if (modal) {
     modal.classList.remove('active');
     document.body.style.overflow = '';
+    document.body.style.paddingRight = '';
   }
 }
 
@@ -322,47 +326,14 @@ function createConfetti() {
 
 /* ---- Page Transitions ---- */
 function initPageTransitions() {
-  document.querySelectorAll('a').forEach(link => {
-    const href = link.getAttribute('href');
-    if (href && !href.startsWith('#') && !href.startsWith('http') && !href.startsWith('mailto') && !href.endsWith('.pdf')) {
-      link.addEventListener('click', (e) => {
-        e.preventDefault();
-        document.body.style.opacity = '0';
-        document.body.style.transition = 'opacity 0.3s ease';
-        setTimeout(() => { window.location.href = href; }, 300);
-      });
-    }
-  });
-  document.body.style.opacity = '0';
-  requestAnimationFrame(() => {
-    document.body.style.transition = 'opacity 0.5s ease';
-    document.body.style.opacity = '1';
-  });
+  // Removed: fade transitions were causing perceived slowness
+  // Links now navigate instantly for snappy feel
 }
 
 /* ---- Parallax ---- */
 function initParallax() {
-  const heroVisual = document.querySelector('.hero-visual');
-  if (!heroVisual) return;
-  let ticking = false;
-  window.addEventListener('scroll', () => {
-    if (!ticking) {
-      requestAnimationFrame(() => {
-        heroVisual.style.transform = `translateY(${window.scrollY * 0.15}px)`;
-        ticking = false;
-      });
-      ticking = true;
-    }
-  });
+  // Removed: CSS-only parallax or simple static layout is faster
 }
 
 /* ---- Magnetic Buttons ---- */
-document.querySelectorAll('.btn, .nav-cta').forEach(btn => {
-  btn.addEventListener('mousemove', (e) => {
-    const rect = btn.getBoundingClientRect();
-    const x = e.clientX - rect.left - rect.width / 2;
-    const y = e.clientY - rect.top - rect.height / 2;
-    btn.style.transform = `translate(${x * 0.1}px, ${y * 0.1}px)`;
-  });
-  btn.addEventListener('mouseleave', () => { btn.style.transform = ''; });
-});
+// Removed: magnetic effect caused layout thrashing and scroll jank

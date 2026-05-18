@@ -227,13 +227,13 @@ function initChartsInContainer(container) {
         label: label,
         data: data,
         backgroundColor: type === 'doughnut' 
-          ? ['#0d9488', '#0f766e', '#14b8a6', '#5eead4', '#99f6e4']
-          : 'rgba(13, 148, 136, 0.7)',
-        borderColor: '#0d9488',
+          ? ['#004B93', '#00205B', '#E31837', '#6BBFDB', '#99f6e4']
+          : 'rgba(0, 75, 147, 0.7)',
+        borderColor: '#004B93',
         borderWidth: 2,
         borderRadius: 6,
         tension: 0.4,
-        fill: type === 'line' ? { target: 'origin', above: 'rgba(13,148,136,0.1)' } : false
+        fill: type === 'line' ? { target: 'origin', above: 'rgba(0,75,147,0.1)' } : false
       }]
     },
     options: {
@@ -301,7 +301,7 @@ function initContactForm() {
 
 /* ---- Confetti ---- */
 function createConfetti() {
-  const colors = ['#0d9488', '#0f766e', '#14b8a6', '#f59e0b', '#0ea5e9'];
+  const colors = ['#004B93', '#00205B', '#E31837', '#6BBFDB', '#0ea5e9'];
   for (let i = 0; i < 50; i++) {
     const confetti = document.createElement('div');
     confetti.style.cssText = `

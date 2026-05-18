@@ -16,11 +16,11 @@
   --text-light: #94a3b8;
   --text-on-dark: #f8fafc;
 
-  --accent-primary: #0d9488;
-  --accent-secondary: #0f766e;
-  --accent-gradient: linear-gradient(135deg, #0d9488 0%, #0f766e 100%);
-  --accent-soft: #ccfbf1;
-  --accent-glow: rgba(13, 148, 136, 0.15);
+  --accent-primary: #004B93;
+  --accent-secondary: #00205B;
+  --accent-gradient: linear-gradient(135deg, #004B93 0%, #00205B 100%);
+  --accent-soft: #E6F0FA;
+  --accent-glow: rgba(0, 75, 147, 0.15);
 
   --success: #10b981;
   --warning: #f59e0b;
@@ -269,33 +269,33 @@ p { color: var(--text-secondary); line-height: 1.7; }
 .competency-card p { font-size: 0.9375rem; }
 
 /* ---- Experience Timeline (Bigger Cards) ---- */
-.timeline { position: relative; max-width: 1000px; margin: 0 auto; }
+.timeline { position: relative; max-width: 1100px; margin: 0 auto; }
 .timeline::before {
   content: ''; position: absolute; left: 50%; transform: translateX(-50%);
-  width: 2px; height: 100%;
+  width: 3px; height: 100%;
   background: linear-gradient(to bottom, var(--accent-primary), var(--accent-secondary));
   border-radius: 2px;
 }
-.timeline-item { position: relative; margin-bottom: 3rem; width: 50%; padding: 0 2rem; }
-.timeline-item:nth-child(odd) { left: 0; text-align: right; padding-right: 3rem; }
-.timeline-item:nth-child(even) { left: 50%; padding-left: 3rem; }
+.timeline-item { position: relative; margin-bottom: 4rem; width: 50%; padding: 0 2rem; }
+.timeline-item:nth-child(odd) { left: 0; text-align: right; padding-right: 4rem; }
+.timeline-item:nth-child(even) { left: 50%; padding-left: 4rem; }
 
 .timeline-dot {
-  position: absolute; width: 16px; height: 16px;
+  position: absolute; width: 20px; height: 20px;
   background: var(--accent-gradient); border-radius: 50%;
   border: 3px solid var(--bg-primary); box-shadow: var(--shadow-md); top: 0;
 }
-.timeline-item:nth-child(odd) .timeline-dot { right: -8px; }
-.timeline-item:nth-child(even) .timeline-dot { left: -8px; }
+.timeline-item:nth-child(odd) .timeline-dot { right: -10px; }
+.timeline-item:nth-child(even) .timeline-dot { left: -10px; }
 
 .timeline-content {
-  background: var(--bg-card); border-radius: var(--radius-lg); padding: 2rem;
+  background: var(--bg-card); border-radius: var(--radius-lg); padding: 2.5rem;
   box-shadow: var(--shadow-md); transition: all var(--duration-normal) var(--ease-spring);
   text-align: left; cursor: pointer; border: 1px solid rgba(0,0,0,0.04);
 }
 .timeline-content:hover { transform: scale(1.02); box-shadow: var(--shadow-xl); border-color: var(--accent-primary); }
 .timeline-img {
-  width: 100%; height: 220px; object-fit: cover; border-radius: var(--radius-md);
+  width: 100%; height: 260px; object-fit: cover; border-radius: var(--radius-md);
   margin-bottom: 1rem; transition: transform var(--duration-normal) var(--ease-spring);
 }
 .timeline-content:hover .timeline-img { transform: scale(1.03); }
@@ -487,7 +487,7 @@ p { color: var(--text-secondary); line-height: 1.7; }
   display: flex; align-items: center; justify-content: center; color: white; font-size: 1rem;
   transition: all var(--duration-fast) var(--ease-spring);
 }
-.social-link:hover { background: var(--accent-primary); transform: translateY(-4px) scale(1.1); box-shadow: 0 10px 20px -5px rgba(13,148,136,0.4); }
+.social-link:hover { background: var(--accent-primary); transform: translateY(-4px) scale(1.1); box-shadow: 0 10px 20px -5px rgba(0,75,147,0.4); }
 .footer-bottom { border-top: 1px solid rgba(255,255,255,0.1); padding-top: 2rem; text-align: center; color: rgba(255,255,255,0.5); font-size: 0.875rem; }
 
 /* ---- Animations ---- */
@@ -535,8 +535,8 @@ p { color: var(--text-secondary); line-height: 1.7; }
 .section-dark { background: var(--bg-dark); color: white; }
 .section-dark p, .section-dark .text-secondary { color: rgba(255,255,255,0.7); }
 .section-dark .card { background: var(--bg-dark-soft); border-color: rgba(255,255,255,0.1); }
-.section-dark .section-label { color: #5eead4; }
-.section-dark .section-label::before { background: #5eead4; }
+.section-dark .section-label { color: #6BBFDB; }
+.section-dark .section-label::before { background: #6BBFDB; }
 
 /* Utility */
 .text-center { text-align: center; }

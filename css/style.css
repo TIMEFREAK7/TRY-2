@@ -599,3 +599,184 @@ p { color: var(--text-secondary); line-height: 1.7; }
   .hero-cta { flex-direction: column; }
   .btn { width: 100%; justify-content: center; }
 }
+
+/* ---- DARK MODE FIXES ---- */
+[data-theme="dark"] .timeline-content {
+  background: var(--bg-dark-soft);
+  border-color: rgba(255,255,255,0.08);
+}
+[data-theme="dark"] .timeline-content:hover {
+  border-color: var(--accent-primary);
+}
+[data-theme="dark"] .timeline-date {
+  background: rgba(0, 75, 147, 0.25);
+  color: #6BBFDB;
+}
+[data-theme="dark"] .timeline-title {
+  color: #f1f5f9;
+}
+[data-theme="dark"] .timeline-company {
+  color: #6BBFDB;
+}
+[data-theme="dark"] .timeline-desc li {
+  color: #94a3b8;
+}
+[data-theme="dark"] .timeline-desc li::before {
+  color: #6BBFDB;
+}
+[data-theme="dark"] .timeline-logo {
+  background: var(--bg-dark-soft);
+  border-color: rgba(0, 75, 147, 0.3);
+}
+
+[data-theme="dark"] .competency-card {
+  background: var(--bg-dark-soft);
+  border-color: rgba(255,255,255,0.08);
+}
+[data-theme="dark"] .competency-card h4 {
+  color: #f1f5f9;
+}
+[data-theme="dark"] .competency-card p {
+  color: #94a3b8;
+}
+
+[data-theme="dark"] .card {
+  background: var(--bg-dark-soft);
+  border-color: rgba(255,255,255,0.08);
+}
+[data-theme="dark"] .card h4 {
+  color: #f1f5f9;
+}
+[data-theme="dark"] .card p {
+  color: #94a3b8;
+}
+
+[data-theme="dark"] .project-card {
+  background: var(--bg-dark-soft);
+  border-color: rgba(255,255,255,0.08);
+}
+[data-theme="dark"] .project-header {
+  background: linear-gradient(135deg, #001a33 0%, #000d1f 100%);
+}
+[data-theme="dark"] .dashboard-metric {
+  background: rgba(255,255,255,0.05);
+}
+[data-theme="dark"] .dashboard-metric:hover {
+  background: rgba(0, 75, 147, 0.2);
+}
+[data-theme="dark"] .metric-label {
+  color: #94a3b8;
+}
+[data-theme="dark"] .metric-value {
+  color: #6BBFDB;
+}
+[data-theme="dark"] .tag {
+  background: rgba(0, 75, 147, 0.25);
+  color: #6BBFDB;
+}
+[data-theme="dark"] .tag:hover {
+  background: rgba(0, 75, 147, 0.4);
+}
+
+[data-theme="dark"] .skills-category {
+  background: var(--bg-dark-soft);
+  border-color: rgba(255,255,255,0.08);
+}
+[data-theme="dark"] .skill-name {
+  color: #f1f5f9;
+}
+[data-theme="dark"] .skill-percent {
+  color: #6BBFDB;
+}
+[data-theme="dark"] .skills-category-title {
+  color: #f1f5f9;
+}
+
+[data-theme="dark"] .contact-card {
+  background: var(--bg-dark-soft);
+  border-color: rgba(255,255,255,0.08);
+}
+[data-theme="dark"] .contact-card:hover {
+  border-color: rgba(0, 75, 147, 0.3);
+}
+[data-theme="dark"] .contact-detail h4 {
+  color: #f1f5f9;
+}
+[data-theme="dark"] .contact-detail p,
+[data-theme="dark"] .contact-detail a {
+  color: #94a3b8;
+}
+[data-theme="dark"] .contact-form-wrapper {
+  background: var(--bg-dark-soft);
+  border-color: rgba(255,255,255,0.08);
+}
+[data-theme="dark"] .form-label {
+  color: #f1f5f9;
+}
+[data-theme="dark"] .form-input,
+[data-theme="dark"] .form-textarea,
+[data-theme="dark"] .form-select {
+  background: rgba(255,255,255,0.05);
+  border-color: rgba(255,255,255,0.1);
+  color: #f1f5f9;
+}
+[data-theme="dark"] .form-input:focus,
+[data-theme="dark"] .form-textarea:focus,
+[data-theme="dark"] .form-select:focus {
+  border-color: var(--accent-primary);
+  box-shadow: 0 0 0 4px rgba(0, 75, 147, 0.3);
+}
+
+[data-theme="dark"] .modal-content {
+  background: var(--bg-dark-soft);
+}
+[data-theme="dark"] .modal-header {
+  border-color: rgba(255,255,255,0.1);
+}
+[data-theme="dark"] .modal-header h3 {
+  color: #f1f5f9;
+}
+[data-theme="dark"] .modal-body p,
+[data-theme="dark"] .modal-body li {
+  color: #94a3b8;
+}
+[data-theme="dark"] .modal-body h4 {
+  color: #6BBFDB;
+}
+[data-theme="dark"] .modal-tag {
+  background: rgba(0, 75, 147, 0.25);
+  color: #6BBFDB;
+}
+
+[data-theme="dark"] .hero-badge {
+  background: rgba(0, 75, 147, 0.25);
+  color: #6BBFDB;
+}
+[data-theme="dark"] .hero-subtitle {
+  color: #94a3b8;
+}
+[data-theme="dark"] .stat-label {
+  color: #94a3b8;
+}
+
+[data-theme="dark"] .section-label {
+  color: #6BBFDB;
+}
+[data-theme="dark"] .section-label::before {
+  background: #6BBFDB;
+}
+
+[data-theme="dark"] .floating-badge {
+  background: var(--bg-dark-soft);
+  color: #f1f5f9;
+  border: 1px solid rgba(255,255,255,0.1);
+}
+[data-theme="dark"] .floating-badge .icon {
+  background: rgba(0, 75, 147, 0.25);
+  color: #6BBFDB;
+}
+
+/* Chart dark mode fixes */
+[data-theme="dark"] .chart-container {
+  background: rgba(255,255,255,0.03);
+}

@@ -182,11 +182,13 @@ function initModals() {
 function openModal(id) {
   const modal = document.getElementById(id);
   if (modal) {
-    modal.classList.add('active');
     document.body.style.overflow = 'hidden';
-    document.body.style.paddingRight = '0px';
+    modal.classList.add('active');
     const content = modal.querySelector('.modal-content');
-    if (content) content.scrollTop = 0;
+    if (content) {
+      content.scrollTop = 0;
+      content.style.overflowY = 'auto';
+    }
   }
 }
 
@@ -195,7 +197,6 @@ function closeModal(id) {
   if (modal) {
     modal.classList.remove('active');
     document.body.style.overflow = '';
-    document.body.style.paddingRight = '';
   }
 }
 

@@ -328,16 +328,29 @@ p { color: var(--text-secondary); line-height: 1.7; }
   display: flex; align-items: center; justify-content: center;
   opacity: 0; pointer-events: none; transition: opacity 200ms ease;
   padding: 1rem;
+  overflow-y: auto;
 }
 .modal-overlay.active { opacity: 1; pointer-events: all; }
 .modal-content {
   background: var(--bg-card); border-radius: var(--radius-xl);
-  max-width: 700px; width: 100%; max-height: 85vh; overflow-y: auto;
-  box-shadow: var(--shadow-xl); transform: translateY(10px);
-  transition: transform 250ms ease, opacity 250ms ease;
+  max-width: 700px; width: 100%; max-height: 85vh;
+  box-shadow: var(--shadow-xl);
+  transition: opacity 200ms ease;
   overscroll-behavior: contain;
+  display: flex;
+  flex-direction: column;
 }
-.modal-overlay.active .modal-content { transform: translateY(0); }
+.modal-body {
+  overflow-y: auto;
+  max-height: calc(85vh - 80px);
+  padding: 2rem;
+  scrollbar-width: thin;
+  scrollbar-color: var(--accent-primary) var(--bg-tertiary);
+}
+.modal-body::-webkit-scrollbar { width: 6px; }
+.modal-body::-webkit-scrollbar-track { background: var(--bg-tertiary); border-radius: 3px; }
+.modal-body::-webkit-scrollbar-thumb { background: var(--accent-primary); border-radius: 3px; }
+.modal-overlay.active .modal-content { opacity: 1; }
 .modal-header {
   padding: 1.5rem 2rem; border-bottom: 1px solid var(--bg-tertiary);
   display: flex; align-items: center; justify-content: space-between;
@@ -779,4 +792,41 @@ p { color: var(--text-secondary); line-height: 1.7; }
 /* Chart dark mode fixes */
 [data-theme="dark"] .chart-container {
   background: rgba(255,255,255,0.03);
+}
+
+/* ---- DARK MODE SELECT FIX ---- */
+[data-theme="dark"] .form-select {
+  background-color: rgba(255,255,255,0.05);
+  border-color: rgba(255,255,255,0.15);
+  color: #f1f5f9;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath fill='%236BBFDB' d='M6 8L1 3h10z'/%3E%3C/svg%3E");
+}
+[data-theme="dark"] .form-select option {
+  background-color: #1e293b;
+  color: #f1f5f9;
+}
+[data-theme="dark"] .form-select:focus {
+  border-color: var(--accent-primary);
+  box-shadow: 0 0 0 4px rgba(0, 75, 147, 0.3);
+}
+
+/* ---- PROJECT IMAGES ---- */
+.project-img-wrapper {
+  width: 100%;
+  height: 200px;
+  overflow: hidden;
+  border-radius: var(--radius-lg) var(--radius-lg) 0 0;
+  position: relative;
+}
+.project-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform var(--duration-normal) var(--ease-spring);
+}
+.project-card:hover .project-img {
+  transform: scale(1.05);
+}
+.project-card .project-header {
+  border-radius: 0;
 }

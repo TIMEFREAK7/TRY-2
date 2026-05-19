@@ -725,8 +725,8 @@ p { color: var(--text-secondary); line-height: 1.7; }
 [data-theme="dark"] .contact-detail a:hover { color: #60a5fa; }
 [data-theme="dark"] .contact-form-wrapper { background: var(--bg-dark-soft); border-color: rgba(255,255,255,0.06); }
 [data-theme="dark"] .form-label { color: var(--text-primary); }
-[data-theme="dark"] .form-input, [data-theme="dark"] .form-textarea, [data-theme="dark"] .form-select { background: rgba(255,255,255,0.05); border-color: rgba(255,255,255,0.12); color: var(--text-primary); }
-[data-theme="dark"] .form-input::placeholder, [data-theme="dark"] .form-textarea::placeholder { color: #64748b; }
+[data-theme="dark"] .form-input, [data-theme="dark"] .form-textarea, [data-theme="dark"] .form-select { background-color: rgba(255,255,255,0.05); border-color: rgba(255,255,255,0.12); color: var(--text-primary); }
+[data-theme="dark"] .form-input::placeholder, [data-theme="dark"] .form-textarea::placeholder, [data-theme="dark"] .form-select option[value=""] { color: #64748b; }
 [data-theme="dark"] .form-input:focus, [data-theme="dark"] .form-textarea:focus, [data-theme="dark"] .form-select:focus { border-color: #3b82f6; box-shadow: 0 0 0 4px rgba(59, 130, 246, 0.2); }
 [data-theme="dark"] .form-select { background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath fill='%2360a5fa' d='M6 8L1 3h10z'/%3E%3C/svg%3E"); }
 [data-theme="dark"] .form-select option { background: #1a2234; color: var(--text-primary); }

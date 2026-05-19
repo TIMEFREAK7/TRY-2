@@ -489,7 +489,17 @@ p { color: var(--text-secondary); line-height: 1.7; }
   outline: none; border-color: var(--accent-primary); box-shadow: 0 0 0 4px var(--accent-glow);
 }
 .form-textarea { min-height: 140px; resize: vertical; }
-.form-select { cursor: pointer; appearance: none; background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath fill='%23475569' d='M6 8L1 3h10z'/%3E%3C/svg%3E"); background-repeat: no-repeat; background-position: right 1rem center; }
+.form-select {
+  cursor: pointer;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath fill='%23475569' d='M6 8L1 3h10z'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 1rem center;
+  background-size: 12px;
+  padding-right: 2.5rem;
+}
 .form-submit { width: 100%; justify-content: center; margin-top: 0.5rem; }
 .form-status { margin-top: 1rem; padding: 1rem; border-radius: var(--radius-md); font-size: 0.9375rem; font-weight: 500; text-align: center; display: none; }
 .form-status.success { display: block; background: var(--accent-soft); color: var(--accent-secondary); }

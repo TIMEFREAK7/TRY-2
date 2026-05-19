@@ -1,88 +1,83 @@
-# Aditya Abhyankar - Professional Portfolio v3 (PepsiCo Theme)
+# Aditya Abhyankar — Professional Portfolio
 
-A modern, interactive 5-page portfolio website with PepsiCo brand colors, dark mode, pop-up modals, Chart.js dashboards, and wide experience cards.
+A polished portfolio website built to showcase technical project management, digital transformation, and engineering delivery experience in a recruiter-friendly format.
 
-## Color Scheme – PepsiCo Brand
+## Overview
 
-| Element | Color | Hex |
-|---------|-------|-----|
-| Primary (Buttons, Accents) | PepsiCo Blue | `#004B93` |
-| Secondary (Gradients, Dark) | Dark Blue | `#00205B` |
-| Highlight/Alert | PepsiCo Red | `#E31837` |
-| Soft Backgrounds | Light Blue | `#E6F0FA` |
-| Glow Effects | Blue Glow | `rgba(0, 75, 147, 0.15)` |
-| Page Background | Very Light Gray | `#F5F7FA` |
+This site presents a clear, modern career story using responsive visuals, concise impact statements, and interactive project summaries.
 
-## What's Included
+- Strong personal branding and professional layout
+- Modern dark mode with accessible form styling
+- Interactive dashboards and project KPI visualizations
+- Recruiter-focused experience and contact flow
 
-- **PepsiCo Brand Colors** – Professional blue palette throughout
-- **Wide Experience Cards** – 1100px timeline, 260px images, 2.5rem padding
-- **Dark Mode Toggle** – Moon/sun icon, persists via localStorage
-- **Click-to-Expand Modals** – Every card opens detailed popup (ESC to close)
-- **Chart.js Graphs** – Bar, line, doughnut charts with PepsiCo colors
-- **Contact Dropdown** – Standard recruiter contact reasons
+## What’s Included
 
-## Pages
+- **Experience Narrative** — A structured timeline with clear role descriptions and outcomes.
+- **Project Showcase** — Dashboards, charts, and modal summaries highlight delivery metrics and business impact.
+- **Competency Overview** — Skills, certifications, and technical strengths presented with animated progress visuals.
+- **Contact Experience** — A clean contact form built for hiring and consulting inquiries.
+- **Static Deployment Ready** — Ready for Vercel, Netlify, GitHub Pages, or any static site host.
 
-1. **Home** – Hero, prominent competencies with modals, achievements, education
-2. **Experience** – Wide timeline cards (1100px) with photos, click for full details
-3. **Projects** – Dashboards with SVG rings + Chart.js graphs + detail modals
-4. **Competencies** – Animated skill bars, languages, certifications
-5. **Contact** – Web3Forms with dropdown, contact cards, availability status
+## Site Pages
 
-## Deployment
-
-### GitHub + Vercel (No Terminal Needed)
-
-1. Create a new repository on GitHub
-2. Upload all files from this folder (drag & drop)
-3. Go to vercel.com → Sign in with GitHub
-4. Click "Add New Project" → Import your repository
-5. Vercel auto-detects static site and deploys in ~30 seconds
+1. **Home** — Overview, strengths, competency highlights, and introduction.
+2. **Experience** — Career timeline with clickable details and visual context.
+3. **Projects** — Portfolio projects with performance metrics and delivery highlights.
+4. **Competencies** — Core skills, tools, and capabilities in a polished format.
+5. **Contact** — Direct communication, availability, and recruiter-friendly contact options.
 
 ## File Structure
 
-```
-portfolio/
+```text
+Aditya-Abhyankar-Portfolio/
 ├── index.html              # Home page
-├── experience.html         # Work experience timeline
-├── projects.html           # Project dashboards with charts
-├── skills.html            # Core competencies
-├── contact.html           # Contact form with dropdown
-├── Aditya_Abhyankar_CV.pdf # Your CV
+├── experience.html         # Professional experience timeline
+├── projects.html           # Project dashboards and portfolio highlights
+├── skills.html             # Competencies and technical strengths
+├── contact.html            # Contact form and hiring details
+├── Aditya_Abhyankar_CV.pdf # Resume download
 ├── css/
-│   └── style.css          # PepsiCo theme + animations
+│   └── style.css           # Layout, dark mode, branding, and animations
 ├── js/
-│   └── main.js            # Interactions + Chart.js + dark mode
-├── images/                # Add your photos here
-└── README.md              # This file
+│   └── main.js             # Interactions, theme toggle, and charts
+├── images/                 # Portfolio visuals and photos
+└── README.md               # Project overview and deployment notes
 ```
 
-## Tech Stack
+## Technologies
 
-- Pure HTML5, CSS3, Vanilla JavaScript (no frameworks)
-- Chart.js 4.4.1 (charts and graphs)
-- Font Awesome 6 (icons)
+- HTML5
+- CSS3 with responsive and dark-mode support
+- Vanilla JavaScript
+- Chart.js for interactive visualizations
+- Font Awesome for iconography
 - Google Fonts (Inter)
-- Web3Forms API (contact form)
+- Web3Forms for contact submissions
 
-## Customization
+## Deployment
 
-### Replace Images
-- **Profile Photo**: `index.html` – change the `ui-avatars.com` URL to your image path
-- **Experience Photos**: `experience.html` – change the Unsplash URLs
+This portfolio is ready for static deployment on Vercel, Netlify, GitHub Pages, or similar platforms.
 
-### Update Contact
-- Email: `Aditya.abhyankar22@gmail.com` (already set)
-- Web3Forms key: `e556db48-9042-4daa-9ee9-b294963e883f` (already set)
+### Vercel Deployment Steps
 
-### Change Colors
-All colors are CSS variables at the top of `css/style.css`:
-```css
---accent-primary: #004B93;
---accent-secondary: #00205B;
-```
+1. Push the repository to GitHub.
+2. Connect the repository to Vercel.
+3. Vercel detects the static site and deploys automatically.
+
+## Customization Notes
+
+- Replace portfolio imagery in `images/` and update `src` references in HTML.
+- Edit contact details in `contact.html`.
+- Update visual branding using CSS variables in `css/style.css`.
+
+## Why This Portfolio Works for Recruiters
+
+- Clear and concise content structure for fast evaluation.
+- Strong emphasis on measurable project impact and technical delivery.
+- Modern, mobile-friendly design with professional attention to detail.
+- Smooth contact flow for hiring managers and consulting opportunities.
 
 ---
 
-Built with precision by Aditya Abhyankar | 2026
+© 2026 Aditya Abhyankar
